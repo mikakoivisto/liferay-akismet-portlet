@@ -1,3 +1,4 @@
+<%--
 /**
  * Copyright (c) 2012 Mika Koivisto <mika@javaguru.fi>
  *
@@ -14,7 +15,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
- 
+--%>
+
 <%@ include file="init.jsp" %>
 
 <%
