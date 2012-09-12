@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="fi.javaguru.akismet.mb.model.AkismetMBMessage" />
+	<class name="fi.javaguru.akismet.mb.model.impl.AkismetMBMessageImpl" table="Akismet_AkismetMBMessage">
+		<cache usage="read-write" />
+		<id name="akismetMBMessageId" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="groupId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+		<property name="mbMessageId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="spam" type="com.liferay.portal.dao.orm.hibernate.BooleanType" />
+		<property name="author" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="authorEmail" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="authorUrl" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="content" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="permalink" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="referrer" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="type" type="com.liferay.portal.dao.orm.hibernate.StringType" column="type_" />
+		<property name="userAgent" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userIp" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+	</class>
+</hibernate-mapping>

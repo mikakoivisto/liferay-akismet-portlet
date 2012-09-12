@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.1.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_1_0.dtd">
+<service-builder package-path="fi.javaguru.akismet.mb">
+	<author>Mika Koivisto</author>
+	<namespace>Akismet</namespace>
+	<entity name="AkismetMBMessage" local-service="true" remote-service="false">
+		<column name="akismetMBMessageId" type="long" primary="true" />
+
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+
+		<column name="mbMessageId" type="long" />
+		<column name="spam" type="boolean" />
+
+		<column name="author" type="String" />
+		<column name="authorEmail" type="String" />
+		<column name="authorUrl" type="String" />
+		<column name="content" type="String" />
+		<column name="permalink" type="String" />
+		<column name="referrer" type="String" />
+		<column name="type" type="String" />
+		<column name="userAgent" type="String" />
+		<column name="userId" type="long" />
+		<column name="userIp" type="String" />
+
+		<finder return-type="Collection" name="GroupId">
+			<finder-column name="groupId" />
+		</finder>
+		<finder return-type="AkismetMBMessage" name="MessageId">
+			<finder-column name="mbMessageId" />
+		</finder>
+	</entity>
+</service-builder>
